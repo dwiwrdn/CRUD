@@ -31,7 +31,8 @@ def read():
     cursor.execute(query)
     result = cursor.fetchall()
     for x in result:
-        print(x)
+        print( f"{x[0]}. nama : {x[1]}, nomor : {x[2]}")
+        # database tuh bentuknya tuple beda sama list yang kalo akses harus pake nomor urut atau indekss
 
 def update(id, name, number):
     query = ("UPDATE kontak SET nama = %s, number = %s WHERE id = %s")
@@ -64,10 +65,10 @@ while True:
             create(name, number)
             break
 
+    elif choice == 2:
+        read()
     else :
         break
-    #elif choice == 2:
-   #     pass
   #  elif choice == 3:
  #       pass
 #    elif choice == 4:
