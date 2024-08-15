@@ -70,13 +70,17 @@ while True:
 
     elif choice == 3:
         while True:
-            number_id = input("Masukan nomor berapa yang ingin dirubah(ketik 'exit' untuk keluar): ")
+            number_id = input("Masukan nomor berapa yang ingin dirubah (ketik 'exit' untuk keluar): ")
             if number_id == 'exit' :
                 break
             nama_baru = str(input("Masukan nama baru : "))
             nomor_baru = int(input("Masukan nomor baru : "))
             update(number_id, nama_baru, nomor_baru)
+    elif choice == 4:
+        while True:
+            number_id = input("Masukan nomor berapa yang ingin dihapus (ketik 'exit' untuk keluar):")
+            if number_id == "exit":
+                break
+            delete(number_id)
     else :
         break
-#    elif choice == 4:
-#        pass
